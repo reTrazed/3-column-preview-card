@@ -4,12 +4,50 @@
     --luxuryColor: hsl(179, 100%, 13%);
     --pColor: hsla(0, 0%, 100%, 0.75);
     --btnColor: hsl(0, 0%, 95%);
+
+    
+}
+
+body, html {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    
+}
+
+section {
+    
+    grid-column-start: 2;
+    min-width: 100%;
+}
+
+main {
+    
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    
 }
 
 article {
     color: var(--btnColor);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    width: 400px;
+    height: 300px;
+}
+
+p {
+    color: var(--pColor);
+    margin-bottom: 50px;
+}
+
+h1 {
+    margin-bottom: 10px;
 }
 
 .sedan {
@@ -30,5 +68,62 @@ section {
 
 .learn {
     background-color: var(--btnColor);
-    opacity: 0.5;
+    border: 0.1px solid var(--btnColor);
+    border-radius: 25px;
+    transform: scale(1.2,1.2);
+    padding: 10px 15px;
+}
+
+#sedanbtn {
+    color: var(--sedanColor);
+    cursor: pointer;
+}
+
+#sedanbtn:active {
+    background-color: var(--sedanColor);
+    color: var(--btnColor);
+}
+ 
+#suvbtn {
+    color: var(--suvColor);
+    
+}
+
+#suvbtn:active {
+    background-color: var(--suvColor);
+    color: var(--btnColor);
+}
+
+#luxurybtn {
+    color: var(--luxuryColor);
+}
+
+#luxurybtn:active {
+    background-color: var(--luxuryColor);
+    color: var(--btnColor);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    
+    
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media only screen and (max-width: 375px) {
+    section {
+    
+    flex-direction: column;
+    
+    
+}
+article {
+        width: auto;
+    height: 300px;
+}
+
 }
